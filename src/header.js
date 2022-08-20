@@ -1,5 +1,6 @@
-let Header = () => { 
-
+let Header = (props) => { 
+	// props is the parameter that receive every custom attributes in Header component call
+	console.log(props);
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
 		  <div className="container-fluid">
@@ -41,16 +42,17 @@ let Header = () => {
 		            Dropdown
 		          </a>
 		          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-		            <li>
-		              <a className="dropdown-item" href="#">
-		                Action
-		              </a>
-		            </li>
-		            <li>
-		              <a className="dropdown-item" href="#">
-		                Another action
-		              </a>
-		            </li>
+								{/* loop in object passed to props */}
+								{/* js code in two {} */}
+								{props.dataObject.map((item,index) => {
+									return (<li>
+													<a className="dropdown-item" href="#">
+														{item.name}
+													</a>
+												</li>)
+								})}
+		            
+		            
 		            <li>
 		              <hr className="dropdown-divider" />
 		            </li>
@@ -63,15 +65,17 @@ let Header = () => {
 		        </li>
 		        <li className="nav-item">
 		          <a
-		            className="nav-link disabled"
+		            className="nav-link disabled text-danger fw-bold"
 		            href="#"
 		            tabIndex={-1}
 		            aria-disabled="true"
 		          >
-		            Disabled
+								{props.dataObject.username}
 		          </a>
 		        </li>
 		      </ul>
+					{/* call the function and event onClick={} camelcase */}
+					<input className="btn btn-primary" type={'button'} value='activate' onClick={props.funRefAttr}/>
 		    </div>
 		  </div>
 		</nav>

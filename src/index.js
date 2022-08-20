@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
 import App from './App.js';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
+//virtual dom connect with real dom
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // get app from App.js as variable

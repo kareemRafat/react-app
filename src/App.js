@@ -10,12 +10,34 @@ import Header from './header.js';
     * call it Header *
 */
 
+/*  some test variables  */
+let content = <span> from contnet variable in App.js</span>;
+let funRef = () => {
+  alert('good react');
+}
+let namesObject = [
+  {id : 1 , name : 'Kareem'},
+  {id : 2 , name : 'Alaa'},
+  {id : 3 , name : 'Islam'},
+];
+
 let App = () => {
 
   return (
+    // nameless tag <></> to make parent to two jsx either component or normal jsx
     <>
       {/* get the header jsx element and inject the App with it*/}
-      <Header/>
+      {/* function component with paired tags*/}
+      <Header 
+        data={content} 
+        dataArray={['ahmed','ali','ayman']}
+        dataObject = {namesObject}
+        // funRefAttr = {funRef}
+        funRefAttr = { () => {alert('inline function')} }
+      >
+        {/* passed as children to header props params */}
+        <p>this is child in Header component</p>
+      </Header>
 
       <div style={{
               color : 'dodgerblue',
