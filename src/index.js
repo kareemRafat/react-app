@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
-import divElement from './divModule.js';
+import App from './App.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// get divElement from divModule.js
-root.render(divElement);
+// get app from App.js as variable
+// root.render(App);
 
+// get app as a function
+root.render(<App/>);
 
 
 

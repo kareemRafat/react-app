@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './header.js';
 
-function App() {
+/*
+  types of components 
+  1- variable component ===> let myHeader = (<nav></nav>) ;
+    call it ===> {myHeader} ==> must be between {}
+  2- function component ===> let myHeader = () => return (<nav></nav>)
+    call it ===> <myHeader/>  without {}  ==> you created your own tag 
+    * warning * don`t name the function component like tag names as header 
+    * call it Header *
+*/
+
+let App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* get the header jsx element and inject the App with it*/}
+      <Header/>
+
+      <div style={{
+              color : 'dodgerblue',
+              fontSize : '60px'
+            }}  
+           className='App fw-bold fst-italic'>
+
+          <p>Welcome to my first react app</p>
+
+      </div>
+    </>
+
   );
 }
-
-export default App;
+export default App ;
