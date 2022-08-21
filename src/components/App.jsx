@@ -1,4 +1,4 @@
-import Header from './header.js';
+import Header from './header.jsx';
 
 /*
   types of components 
