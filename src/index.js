@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
 import App from './components/App.jsx';
-import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+// webpack will handle the following configurations and search in node_modules
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 //virtual dom connect with real dom

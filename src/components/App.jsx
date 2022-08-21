@@ -20,6 +20,7 @@ let namesObject = [
   {id : 2 , name : 'Alaa'},
   {id : 3 , name : 'Islam'},
 ];
+/*  end some test variables  */
 
 let App = () => {
 
