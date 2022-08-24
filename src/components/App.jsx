@@ -1,4 +1,5 @@
 import Header from './header.jsx';
+import Body from './Body.jsx';
 
 /*
   types of components 
@@ -40,15 +41,17 @@ let App = () => {
         <p>this is child in Header component</p>
       </Header>
 
+      {/* normal jsx */}
       <div style={{
               color : 'dodgerblue',
               fontSize : '60px'
             }}  
            className='App fw-bold fst-italic'>
-
           <p>Welcome to my first react app</p>
-
       </div>
+      
+      {/* class component */}
+      <Body />
     </>
 
   );
