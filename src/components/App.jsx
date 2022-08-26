@@ -1,6 +1,7 @@
 import Header from './header.jsx';
 import Body from './Body.jsx';
 
+
 /*
   types of components 
   1- variable component ===> let myHeader = (<nav></nav>) ;
@@ -9,6 +10,8 @@ import Body from './Body.jsx';
     call it ===> <myHeader/>  without {}  ==> you created your own tag 
     * warning * don`t name the function component like tag names as header 
     * call it Header *
+  3- class component ===> class Header extends  Component {}
+    call it ===> <myHeader/>  without {}  ==> you created your own tag 
 */
 
 /*  some test variables  */

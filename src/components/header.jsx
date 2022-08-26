@@ -1,11 +1,19 @@
-let Header = (props) => { 
+import {useState} from 'react'
+
+let Header = (props) => {
+
+	const [isHidden , toggleHidden] = useState(false);
+	
+	// console.log(isHidden); 
+
+
 	// props is the parameter that receive every custom attributes in Header component call
-	console.log(props);
+	// console.log(props);
 	return (
 		<>
 		<nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
 		  <div className="container-fluid">
-		    <a className="navbar-brand" href="#">
+		    <a className="navbar-brand" href=" ">
 		      Navbar
 		    </a>
 		    <button
@@ -22,19 +30,19 @@ let Header = (props) => {
 		    <div className="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 		        <li className="nav-item">
-		          <a className="nav-link active" aria-current="page" href="#">
+		          <a className="nav-link active" aria-current="page" href=" ">
 		            Home
 		          </a>
 		        </li>
 		        <li className="nav-item">
-		          <a className="nav-link" href="#">
+		          <a className="nav-link" href=" ">
 		            Link
 		          </a>
 		        </li>
 		        <li className="nav-item dropdown">
 		          <a
 		            className="nav-link dropdown-toggle"
-		            href="#"
+		            href=" "
 		            id="navbarDropdown"
 		            role="button"
 		            data-bs-toggle="dropdown"
@@ -47,7 +55,7 @@ let Header = (props) => {
 								{/* js code in two {} */}
 								{props.dataObject.map((item,index) => {
 									return (<li key={item.name}>
-													<a className="dropdown-item"  href="#">
+													<a className="dropdown-item"  href=" ">
 														{item.name}
 													</a>
 												</li>)
@@ -80,6 +88,11 @@ let Header = (props) => {
 		    </div>
 		  </div>
 		</nav>
+		
+		<button onClick={()=> {
+			toggleHidden(!isHidden)
+			console.log(isHidden);
+		}}>change</button>
 		</>	
 	);
 }

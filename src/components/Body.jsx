@@ -3,6 +3,7 @@ import {Component} from "react";
 class Body extends Component {
 
   i = 4 ;
+  
 
   state = {
     post : [
